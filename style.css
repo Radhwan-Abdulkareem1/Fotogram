@@ -1,0 +1,200 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.figtree-uniquifier {
+    font-family: "Figtree", sans-serif;
+    color: white;
+}
+
+.header {
+    background-color: rgba(9, 33, 42, 1);
+    height: 80px;
+    padding: 0 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Logo-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.logo-headline {
+    margin: 0;
+    font-size: 32px;
+    font-family: "Outfit", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(6, 23, 30, 1);
+    padding: 88px 80px 64px 80px;
+}
+
+.img-button {
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.main-imgs {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+}
+
+.main-imgs:hover {
+    transform: scale(1.05);
+}
+
+.dialog {
+    padding: 0 60px;
+    background-color: rgba(6, 23, 30, 1);
+    border: 0;
+    border-radius: 40px;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-close-button {
+    font-size: 40px;
+    background: none;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+
+.dialog-close-button:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.20);
+    color:  rgba(253, 91, 79);
+}
+
+#dialog img {
+    display: block;
+}
+
+.dialog-opened-image {
+    width: 800px;
+    height: 600px;
+}
+
+.next-previous-div {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.change-precious-button {
+    background-color: rgba(253, 91, 79, 0.1);
+    padding: 16px;
+    border-radius: 100%;
+    border: 0;
+    cursor: pointer;
+}
+
+.change-precious-button:hover {
+    transition: all 0.2s ease;
+    transform: scale(1.15);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(9, 33, 42, 1);
+    height: 100px;
+    padding: 0 80px;
+}
+
+.footer-divs {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.footer-divs a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-divs a:hover {
+    transition: all 0.5s ease;
+    filter: brightness(2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    transform: translateY(-5px);
+}
+
+.div-seperator {
+    width: 2px;
+    height: 48px;
+    background-color: white;
+}
+
+.footer-contact-apps {
+    transition: all 0.5s ease;
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    border: 2px solid transparent;
+}
+
+
+
+.footer-right {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.footer-contact-apps:hover {
+    transition: all 0.5s ease;
+    border-radius: 24px;
+    border-color: white;
+    filter: none;
+    background-color: white;
+    transform: translateY(-5px);
+}

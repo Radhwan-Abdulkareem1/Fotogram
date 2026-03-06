@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="./index.html" aria-label="Go to homepage" class="Logo-img">
+            <div class="logo-div">
+                <img src="./img/icons/logo.png" alt="Logo-img">
+                <span class="logo-headline font-color">Fotogram</span>
+            </div>
+        </a>
+    </header>
+
+    <main class="main-padding">
+        <section class="main-section">
+            <h1 class="headline font-color figtree-uniquifier">Your personal photo album</h1>
+            <div id="imgs" class="imgs"></div>
+        </section>
+        <dialog id="dialog" class="dialog">
+            <div class="dialog-header">
+                <h1 id="pictureheadline" class="font-color figtree-uniquifier"></h1>
+                <button onclick="closeDialog()" class="dialog-close-button figtree-uniquifier">
+                    &times;
+                </button>
+            </div>
+            <div><img alt="" id="dialogImage" class="dialog-opened-image">
+
+                <div class="next-previous-div font-color">
+                    <button onclick="previousImage()" class="change-precious-button">
+                        <img src="./img/icons/Union-left.svg" alt="">
+                    </button>
+                    <h4 id="imagePosition" class="figtree-uniquifier"></h4>
+                    <button onclick="nextImage()" class="change-precious-button">
+                        <img src="./img/icons/Union-right.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-divs">
+            <a href="./index.html">
+                <img src="./img/icons/logo.png" alt="">
+            </a>
+            <h5 class="figtree-uniquifier">created by Radhwan Abdulkareem 2026</h5>
+        </div>
+        <div class="footer-divs figtree-uniquifier">
+            <a href="#">Impressum</a>
+            <div class="div-seperator"></div>
+            <a href="#">Datenschutz</a>
+        </div>
+        <div class="footer-right">
+            <a href="" class="footer-right-links">
+                <img src="./img/icons/discord_icon.svg" alt="" class="footer-contact-apps">
+            </a>
+            <div class="div-seperator"></div>
+            <a href="" class="footer-right-links">
+                <img src="./img/icons/instagram.svg" alt="" class="footer-contact-apps">
+            </a>
+            <div class="div-seperator"></div>
+            <a href="" class="footer-right-links">
+                <img src="./img/icons/whatsapp-logo.svg" alt="" class="footer-contact-apps">
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
