@@ -1,15 +1,15 @@
 let myImgs = [
 
     { adress: "ahmadardity-quran-4951037_1280.jpg", name: "Quran", description: "Islamische Bücher" },
-    { adress: "ben_kerckx-mosque-6835469_1280.jpg", name: "Mosque", description: "Ein Moschee" },
-    { adress: "freebiespic-quran-4178711_1280.jpg", name: "Quran2", description: "Ein Quran mit spanischer Übersetzung" },
-    { adress: "glady-mecca-66966_1280.jpg", name: "Mekkah from Mountain", description: "Ein Bild von Mekkah" },
-    { adress: "hnsarowar385-mosque-8328077_1280.jpg", name: "Aqsa Mosque", description: "Ein Bild bon Aqsa Moschee im Quds" },
+    { adress: "ben_kerckx-mosque-6835469_1280.jpg", name: "Moschee", description: "Ein Moschee" },
+    { adress: "freebiespic-quran-4178711_1280.jpg", name: "Quran", description: "Ein Quran mit spanischer Übersetzung" },
+    { adress: "glady-mecca-66966_1280.jpg", name: "Mekkah vom Berg aus", description: "Ein Bild von Mekkah" },
+    { adress: "hnsarowar385-mosque-8328077_1280.jpg", name: "Aqsa Moschee", description: "Ein Bild bon Aqsa Moschee im Quds" },
     { adress: "konevi-cami-4190404_1280.jpg", name: "Madina", description: "Ein Bild von Medina" },
-    { adress: "konevi-kaaba-4372252_1280.jpg", name: "Mahram Mosque", description: "Mahram Moschee in Mekkah" },
-    { adress: "mdjihadhossen-islam-8519137_1280.jpg", name: "Quran3", description: "Ein Bild von Quran" },
-    { adress: "rwayne307-al-aqsa-mosque-196846_1280.jpg", name: "Aqsa Mosque", description: "Aqsa Moschee im Quds" },
-    { adress: "shamsherniazi-birds-5407779_1280.jpg", name: "Mosque", description: "Ein Moschee in einem islamischem Stadt" }
+    { adress: "konevi-kaaba-4372252_1280.jpg", name: "Mahram Moschee", description: "Mahram Moschee in Mekkah" },
+    { adress: "mdjihadhossen-islam-8519137_1280.jpg", name: "Quran", description: "Ein Bild von Quran" },
+    { adress: "rwayne307-al-aqsa-mosque-196846_1280.jpg", name: "Aqsa Moschee", description: "Aqsa Moschee im Quds" },
+    { adress: "shamsherniazi-birds-5407779_1280.jpg", name: "Moschee", description: "Ein Moschee in einem islamischem Stadt" }
 ]; // das ist unser Array mit den unterschiedlichen Objekten! 
 
 let imgOutput = document.getElementById("imgs"); // hiermit haben wir zugriff auf unser div mit dem id imgs
