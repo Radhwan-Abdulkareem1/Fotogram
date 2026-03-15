@@ -43,7 +43,7 @@ body {
     color: white;
 }
 
-.header-right-side{
+.header-nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,6 +63,7 @@ body {
     border-radius: 20px;
     border-color: white;
     transition: all 0.5s ease;
+    transform: translateY(-2px);
 }
 
 .main-section {
@@ -145,7 +146,7 @@ body {
     height: 600px;
 }
 
-.next-previous-div {
+.next-previous-section {
     padding-top: 24px;
     padding-bottom: 24px;
     display: flex;
@@ -177,7 +178,7 @@ body {
     padding: 0 80px;
 }
 
-.footer-divs {
+.footer-section {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -185,13 +186,13 @@ body {
     gap: 24px;
 }
 
-.footer-divs a {
+.footer-section a {
     transition: all 0.5s ease;
     text-decoration: none;
     color: white;
 }
 
-.footer-divs a:hover {
+.footer-section a:hover {
     transition: all 0.5s ease;
     filter: brightness(2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
     transform: translateY(-5px);

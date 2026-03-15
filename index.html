@@ -19,7 +19,7 @@
             <img src="./img/icons/logo.png" alt="Logo-img">
             <span class="logo-headline font-color">Fotogram</span>
         </a>
-        <nav class="header-right-side">
+        <nav class="header-nav">
             <a href="#">
                 <img src="./img/icons/whatsapp-logo.svg" alt="" class="header-right-links">
             </a>
@@ -35,10 +35,10 @@
     </header>
 
     <main class="main-padding">
-        <section class="main-section">
+        <article class="main-section">
             <h1 class="headline font-color figtree-uniquifier">Ein paar Lieblingsbilder von mir</h1>
-            <div id="imgs" class="imgs"></div>
-        </section>
+            <section id="imgs" class="imgs"></section>
+        </article>
         <dialog id="dialog" class="dialog">
             <header class="dialog-header">
                 <h1 id="pictureheadline" class="figtree-uniquifier"></h1>
@@ -51,7 +51,7 @@
                     <img alt="" id="dialogImage" class="dialog-opened-image">
                     <figcaption id="imageCaption" class="dialog-figcaption figtree-uniquifier"></figcaption>
                 </figure>
-                <div class="next-previous-div font-color">
+                <footer class="next-previous-section font-color">
                     <button onclick="previousImage()" class="change-precious-button">
                         <img src="./img/icons/Union-left.svg" alt="">
                     </button>
@@ -59,24 +59,23 @@
                     <button onclick="nextImage()" class="change-precious-button">
                         <img src="./img/icons/Union-right.svg" alt="">
                     </button>
-                </div>
+                </footer>
             </main>
         </dialog>
     </main>
-
     <footer class="footer">
-        <div class="footer-divs">
+        <section class="footer-section">
             <a href="./index.html">
                 <img src="./img/icons/logo.png" alt="">
             </a>
             <h5 class="figtree-uniquifier">created by Radhwan Abdulkareem 2026</h5>
-        </div>
-        <div class="footer-divs figtree-uniquifier">
+        </section>
+        <section class="footer-section figtree-uniquifier">
             <a href="#">Impressum</a>
             <div class="div-seperator"></div>
             <a href="#">Datenschutz</a>
-        </div>
-        <div class="footer-right">
+        </section>
+        <section class="footer-right">
             <a href="">
                 <img src="./img/icons/discord_icon.svg" alt="" class="footer-contact-apps">
             </a>
@@ -88,7 +87,7 @@
             <a href="">
                 <img src="./img/icons/whatsapp-logo.svg" alt="" class="footer-contact-apps">
             </a>
-        </div>
+        </section>
     </footer>
 </body>
 <script src="script.js"></script>
