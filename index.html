@@ -16,27 +16,41 @@
 <body>
     <header class="header">
         <a href="./index.html" aria-label="Go to homepage" class="Logo-img">
-            <div class="logo-div">
-                <img src="./img/icons/logo.png" alt="Logo-img">
-                <span class="logo-headline font-color">Fotogram</span>
-            </div>
+            <img src="./img/icons/logo.png" alt="Logo-img">
+            <span class="logo-headline font-color">Fotogram</span>
         </a>
+        <nav class="header-right-side">
+            <a href="#">
+                <img src="./img/icons/whatsapp-logo.svg" alt="" class="header-right-links">
+            </a>
+            <div class="div-seperator"></div>
+            <a href="mailto:contact.radhwan@gmail.com">
+                <img src="./img/icons/email_icon.svg" alt="" class="header-right-links">
+            </a>
+            <div class="div-seperator"></div>
+            <a href="#">
+                <img src="./img/icons/login.svg" alt="" class="header-right-links">
+            </a>
+        </nav>
     </header>
 
     <main class="main-padding">
         <section class="main-section">
-            <h1 class="headline font-color figtree-uniquifier">Your personal photo album</h1>
+            <h1 class="headline font-color figtree-uniquifier">Ein paar Lieblingsbilder von mir</h1>
             <div id="imgs" class="imgs"></div>
         </section>
         <dialog id="dialog" class="dialog">
-            <div class="dialog-header">
-                <h1 id="pictureheadline" class="font-color figtree-uniquifier"></h1>
+            <header class="dialog-header">
+                <h1 id="pictureheadline" class="figtree-uniquifier"></h1>
                 <button onclick="closeDialog()" class="dialog-close-button figtree-uniquifier">
                     &times;
                 </button>
-            </div>
-            <div><img alt="" id="dialogImage" class="dialog-opened-image">
-
+            </header>
+            <main>
+                <figure>
+                    <img alt="" id="dialogImage" class="dialog-opened-image">
+                    <figcaption id="imageCaption" class="dialog-figcaption figtree-uniquifier"></figcaption>
+                </figure>
                 <div class="next-previous-div font-color">
                     <button onclick="previousImage()" class="change-precious-button">
                         <img src="./img/icons/Union-left.svg" alt="">
@@ -46,7 +60,7 @@
                         <img src="./img/icons/Union-right.svg" alt="">
                     </button>
                 </div>
-            </div>
+            </main>
         </dialog>
     </main>
 
@@ -63,15 +77,15 @@
             <a href="#">Datenschutz</a>
         </div>
         <div class="footer-right">
-            <a href="" class="footer-right-links">
+            <a href="">
                 <img src="./img/icons/discord_icon.svg" alt="" class="footer-contact-apps">
             </a>
             <div class="div-seperator"></div>
-            <a href="" class="footer-right-links">
+            <a href="">
                 <img src="./img/icons/instagram.svg" alt="" class="footer-contact-apps">
             </a>
             <div class="div-seperator"></div>
-            <a href="" class="footer-right-links">
+            <a href="">
                 <img src="./img/icons/whatsapp-logo.svg" alt="" class="footer-contact-apps">
             </a>
         </div>

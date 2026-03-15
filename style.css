@@ -16,23 +16,23 @@ body {
     height: 80px;
     padding: 0 80px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 }
 
 .Logo-img {
+    transition: all 0.5s ease;
     display: flex;
     justify-content: start;
     align-items: center;
     text-decoration: none;
+    gap: 8px;
 }
 
-.logo-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 8px;
+.Logo-img:hover {
+    transition: all 0.5s ease;
+    filter: brightness(2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+    transform: translateY(-5px);
 }
 
 .logo-headline {
@@ -41,6 +41,28 @@ body {
     font-family: "Outfit", sans-serif;
     font-weight: bold;
     color: white;
+}
+
+.header-right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+.header-right-links{
+    width: 40px;
+    height: 40px;
+    filter: invert(1);
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+}
+
+.header-right-links:hover{
+    filter: none;
+    background-color: white;
+    border-radius: 20px;
+    border-color: white;
+    transition: all 0.5s ease;
 }
 
 .main-section {
@@ -71,12 +93,14 @@ body {
 }
 
 .main-imgs {
+    transition: all 0.4s ease;
     width: 200px;
     height: 200px;
     border-radius: 16px;
 }
 
 .main-imgs:hover {
+    transition: all 0.3s ease;
     transform: scale(1.05);
 }
 
@@ -93,6 +117,11 @@ body {
     align-items: center;
 }
 
+.dialog-figcaption{
+    padding-top: 24px;
+    font-size: 24px;
+}
+
 .dialog-close-button {
     font-size: 40px;
     background: none;
@@ -104,7 +133,7 @@ body {
 .dialog-close-button:hover {
     transition: all 0.4s ease;
     transform: scale(1.20);
-    color:  rgba(253, 91, 79);
+    color: rgba(253, 91, 79);
 }
 
 #dialog img {
@@ -126,6 +155,7 @@ body {
 }
 
 .change-precious-button {
+    transition: all 0.2s ease;
     background-color: rgba(253, 91, 79, 0.1);
     padding: 16px;
     border-radius: 100%;
@@ -156,6 +186,7 @@ body {
 }
 
 .footer-divs a {
+    transition: all 0.5s ease;
     text-decoration: none;
     color: white;
 }
@@ -181,15 +212,6 @@ body {
 }
 
 
-
-.footer-right {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: row;
-    gap: 24px;
-}
-
 .footer-contact-apps:hover {
     transition: all 0.5s ease;
     border-radius: 24px;
@@ -197,4 +219,12 @@ body {
     filter: none;
     background-color: white;
     transform: translateY(-5px);
+}
+
+.footer-right {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 24px;
 }
