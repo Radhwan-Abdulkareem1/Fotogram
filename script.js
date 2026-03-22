@@ -18,7 +18,7 @@ for (let i = 0; i < myImgs.length; i++) {
 
     let picture = myImgs[i]; //damit haben wir Zugriff auf objekts in unserem array.
 
-    imgOutput.innerHTML += `<img src="./img/imgs/${picture.adress}" class="main-imgs img-button" onclick="openDialog(${i})">`;
+    imgOutput.innerHTML += `<img src="./img/imgs/${picture.adress}" class="imgs img-button" onclick="openDialog(${i})">`;
     //mit der Forschleife tun wir: 1. div in einem button umgewandelt.
     // 2. im button haben wir Bild mit der jeweiligen Adressen...
 }
