@@ -356,13 +356,65 @@ li {
     .main-section {
         padding: 16px 16px 24px 16px;
     }
-    .headline{
+
+    .headline {
         font-size: 20px;
     }
 
     .imgs {
         width: 150px;
         height: 150px;
+    }
+
+    .main-imgs {
+        gap: 12px;
+    }
+
+    .footer-contact-apps {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .header {
+        padding: 0 16px;
+    }
+
+    .Logo {
+        gap: 4px;
+    }
+
+    .Logo-img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header-right-links {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo-headline {
+        font-size: 20px;
+    }
+
+    .headline {
+        font-size: 22px;
+    }
+
+    .main-section {
+        padding: 16px 16px 24px 16px;
+    }
+
+    .headline {
+        font-size: 20px;
+    }
+
+    .imgs {
+        width: 100px;
+        height: 100px;
     }
 
     .main-imgs {
