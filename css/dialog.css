@@ -140,3 +140,30 @@ figure {
         padding: 8px;
     }
 }
+
+@media(max-width: 600px) {
+    .dialog {
+        padding: 0 10px;
+    }
+
+    .dialog h1 {
+        font-size: 20px;
+    }
+
+    .dialog-header{
+        padding: 0 12px;
+    }
+
+    .dialog-opened-image {
+        width: 300px;
+        height: 280px;
+    }
+
+    .dialog-figcaption {
+        font-size: 12px;
+    }
+
+    .change-precious-button {
+        padding: 6px;
+    }
+}
