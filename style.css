@@ -14,6 +14,11 @@ li {
     list-style: none;
 }
 
+.icon-size {
+    width: 40px;
+    height: 40px;
+}
+
 .figtree-uniquifier {
     font-family: "Figtree", sans-serif;
     color: white;
@@ -29,7 +34,7 @@ li {
     max-width: 1920px;
 }
 
-.Logo {
+.logo {
     transition: all 0.5s ease;
     display: flex;
     justify-content: start;
@@ -38,7 +43,7 @@ li {
     gap: 8px;
 }
 
-.Logo:hover {
+.logo:hover {
     transition: all 0.5s ease;
     filter: brightness(2) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
     transform: translateY(-5px);
@@ -60,8 +65,6 @@ li {
 }
 
 .header-right-links {
-    width: 40px;
-    height: 40px;
     filter: invert(1);
     transition: all 0.5s ease;
     border: 2px solid transparent;
@@ -121,7 +124,7 @@ li {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(9, 33, 42, 1);
-    height: 100px;
+    height: auto;
     padding: 0 80px;
     max-width: 1920px;
 }
@@ -161,12 +164,9 @@ li {
 
 .footer-contact-apps {
     transition: all 0.5s ease;
-    width: 40px;
-    height: 40px;
     filter: invert(1);
     border: 2px solid transparent;
 }
-
 
 .footer-contact-apps:hover {
     transition: all 0.5s ease;
@@ -194,12 +194,7 @@ li {
 
 @media (max-width: 992px) {
 
-    .header-right-links {
-        width: 32px;
-        height: 32px;
-    }
-
-    .Logo-img {
+    .icon-size {
         width: 32px;
         height: 32px;
     }
@@ -208,22 +203,12 @@ li {
         font-size: 30px;
     }
 
-    .logo-icon {
-        width: 32px;
-        height: 32px;
-    }
-
     h5 {
         font-size: 12px;
     }
 
     .footer-center-links {
         font-size: 14px;
-    }
-
-    .footer-contact-apps {
-        width: 32px;
-        height: 32px;
     }
 }
 
@@ -274,7 +259,7 @@ li {
         padding: 0 20px;
     }
 
-    .Logo-img {
+    .logo-img {
         width: 28px;
         height: 28px;
     }
@@ -309,6 +294,7 @@ li {
     }
 
     .footer-seperator {
+        padding-top: 12px;
         width: 100%;
     }
 
@@ -331,11 +317,11 @@ li {
         padding: 0 16px;
     }
 
-    .Logo {
+    .logo {
         gap: 4px;
     }
 
-    .Logo-img {
+    .icon-size {
         width: 24px;
         height: 24px;
     }
@@ -369,11 +355,6 @@ li {
     .main-imgs {
         gap: 12px;
     }
-
-    .footer-contact-apps {
-        width: 24px;
-        height: 24px;
-    }
 }
 
 @media (max-width: 390px) {
@@ -382,11 +363,11 @@ li {
         padding: 0 16px;
     }
 
-    .Logo {
+    .logo {
         gap: 4px;
     }
 
-    .Logo-img {
+    .icon-size {
         width: 24px;
         height: 24px;
     }
@@ -419,10 +400,5 @@ li {
 
     .main-imgs {
         gap: 12px;
-    }
-
-    .footer-contact-apps {
-        width: 24px;
-        height: 24px;
     }
 }
