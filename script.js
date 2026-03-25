@@ -18,9 +18,20 @@ for (let i = 0; i < myImgs.length; i++) {
 
     let picture = myImgs[i]; //damit haben wir Zugriff auf objekts in unserem array.
 
-    imgOutput.innerHTML += `<img src="./img/imgs/${picture.adress}" class="imgs img-button" onclick="openDialog(${i})">`;
+    imgOutput.innerHTML += `<button data-index="${i}" class="imgs"><img src="./img/imgs/${picture.adress}" class="imgs" alt="${picture.name}"></button>`;
     //mit der Forschleife tun wir: 1. div in einem button umgewandelt.
     // 2. im button haben wir Bild mit der jeweiligen Adressen...
+}
+
+addClickEvents();
+
+function addClickEvents() {
+    document.querySelectorAll(".imgs").forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            let index = e.currentTarget.dataset.index;
+            openDialog(index);
+        })
+    })
 }
 
 let dialogRef = document.getElementById("dialog"); //Dialog rufen.
@@ -41,8 +52,10 @@ function openDialog(index) {
 }
 
 function closeDialog() {
-    dialogRef.close() // Dialog schließen
+    dialogRef.close() // Eine Funktion, um Dialog zu schließen
 }
+
+document.getElementById("closeButton").addEventListener("click", closeDialog); //Damit befehlen wir den Dialog zu schließn wenn man auf closeButton klickt.
 
 function nextImage() {
     currentIndex++; // nächste Position von currentIndex aufrufen

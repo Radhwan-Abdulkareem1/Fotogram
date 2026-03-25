@@ -16,25 +16,27 @@
 
 <body>
     <header class="header">
-        <a href="./index.html" aria-label="Go to homepage" class="logo">
+        <a href="./index.html" aria-label="Fotogram - Go to homepage" class="logo">
             <img src="./img/icons/logo.png" alt="Logo-img" class="logo-img icon-size">
             <span class="logo-headline font-color">Fotogram</span>
         </a>
         <nav>
             <ul class="header-nav">
                 <li>
-                    <a href="#">
+                    <a href="./index.html" aria-label="Whatsapp (derzeit nicht verfügbar)">
                         <img src="./img/icons/whatsapp-logo.svg" alt="" class="header-right-links icon-size">
                     </a>
                 </li>
-                <div class="div-seperator"></div>
-                <li><a href="mailto:contact.radhwan@gmail.com">
+                <li class="div-seperator"></li>
+                <li>
+                    <a href="mailto:contact.radhwan@gmail.com" rel="noopener"
+                        aria-label="E-Mail an contact.radhwan@gmail.com senden">
                         <img src="./img/icons/email_icon.svg" alt="" class="header-right-links icon-size">
                     </a>
                 </li>
-                <div class="div-seperator"></div>
+                <li class="div-seperator"></li>
                 <li>
-                    <a href="#">
+                    <a href="./index.html" aria-label="Login (derzeit nicht vorhanden)">
                         <img src="./img/icons/login.svg" alt="" class="header-right-links icon-size">
                     </a>
                 </li>
@@ -50,7 +52,7 @@
         <dialog id="dialog" class="dialog">
             <header class="dialog-header">
                 <h1 id="pictureheadline" class="figtree-uniquifier"></h1>
-                <button onclick="closeDialog()" class="dialog-close-button figtree-uniquifier">
+                <button id="closeButton" class="dialog-close-button figtree-uniquifier">
                     &times;
                 </button>
             </header>
@@ -60,11 +62,11 @@
                     <figcaption id="imageCaption" class="dialog-figcaption figtree-uniquifier"></figcaption>
                 </figure>
                 <footer class="next-previous-section font-color">
-                    <button onclick="previousImage()" class="change-precious-button">
+                    <button onclick="previousImage()" class="change-precious-button" aria-label="Vorheriges Bild anzeigen">
                         <img src="./img/icons/Union-left.svg" alt="">
                     </button>
                     <h4 id="imagePosition" class="figtree-uniquifier"></h4>
-                    <button onclick="nextImage()" class="change-precious-button">
+                    <button onclick="nextImage()" class="change-precious-button" aria-label="Nächstes Bild anzeigen">
                         <img src="./img/icons/Union-right.svg" alt="">
                     </button>
                 </footer>
@@ -73,7 +75,7 @@
     </main>
     <footer class="footer">
         <section class="footer-section">
-            <a href="./index.html">
+            <a href="./index.html" aria-label="Fotogram Logo -Go to homepage">
                 <img src="./img/icons/logo.png" alt="" class="logo-icon icon-size">
             </a>
             <h5 class="figtree-uniquifier">created by Radhwan Abdulkareem 2026</h5>
@@ -85,15 +87,17 @@
                 <a href="#" class="footer-center-links">Datenschutz</a>
             </section>
             <section class="footer-right">
-                <a href="#">
+                <a href="https://discord.com/users/radhwan1" target="_blank" rel="noopener"
+                    aria-label="Discord Profil von radhwan1 öffnen (öffnet in neuem Tab)">
                     <img src="./img/icons/discord_icon.svg" alt="" class="footer-contact-apps icon-size">
                 </a>
                 <div class="div-seperator"></div>
-                <a href="https://www.instagram.com/razwanofficial/" target="_blank">
+                <a href="https://www.instagram.com/razwanofficial/" target="_blank" rel="noopener"
+                    aria-label="instagram Profil von razwanofficial öffnen (öffnet in neuem Tab)">
                     <img src="./img/icons/instagram.svg" alt="" class="footer-contact-apps icon-size">
                 </a>
                 <div class="div-seperator"></div>
-                <a href="#">
+                <a href="./index.html" aria-label="Whatsapp (derzeit nicht verfügbar)">
                     <img src="./img/icons/whatsapp-logo.svg" alt="" class="footer-contact-apps icon-size">
                 </a>
             </section>

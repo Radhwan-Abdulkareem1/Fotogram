@@ -1,3 +1,8 @@
+button:focus-visible {
+    outline: 2px solid rgb(255, 255, 255);
+    outline-offset: 4px;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -88,16 +93,6 @@ li {
     padding: 88px 80px 64px 80px;
 }
 
-.img-button {
-    border-width: 0;
-    border-style: none;
-    padding: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 16px;
-    cursor: pointer;
-}
-
 .main-imgs {
     display: flex;
     justify-content: center;
@@ -111,10 +106,14 @@ li {
     width: 200px;
     height: 200px;
     border-radius: 16px;
+    border-width: 0;
+    border-style: none;
+    padding: 0;
+    cursor: pointer;
 }
 
 .imgs:hover {
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     transform: scale(1.05);
 }
 
