@@ -1,4 +1,4 @@
-let myImgs = [
+const myImgs = [
 
     { adress: "ahmadardity-quran-4951037_1280.jpg", name: "Quran", description: "Islamische Bücher" },
     { adress: "ben_kerckx-mosque-6835469_1280.jpg", name: "Moschee", description: "Ein Moschee" },
@@ -14,16 +14,19 @@ let myImgs = [
 
 let imgOutput = document.getElementById("imgs"); // hiermit haben wir zugriff auf unser div mit dem id imgs
 
-for (let i = 0; i < myImgs.length; i++) {
+function Forschleife() {
 
-    let picture = myImgs[i]; //damit haben wir Zugriff auf objekts in unserem array.
+    for (let i = 0; i < myImgs.length; i++) {
 
-    imgOutput.innerHTML += `<button data-index="${i}" class="img-button"><img src="./img/imgs/${picture.adress}" class="imgs" alt="${picture.name}"></button>`;
-    //mit der Forschleife tun wir: 1. div in einem button umgewandelt.
-    // 2. im button haben wir Bild mit der jeweiligen Adressen...
+        let picture = myImgs[i]; //damit haben wir Zugriff auf objekts in unserem array.
+
+        imgOutput.innerHTML += `<button data-index="${i}" class="img-button"><img src="./img/imgs/${picture.adress}" class="imgs" alt="${picture.name}"></button>`;
+        //mit der Forschleife tun wir: 1. div in einem button umgewandelt.
+        // 2. im button haben wir Bild mit der jeweiligen Adressen...
+    }
+    addClickEvents();
 }
 
-addClickEvents();
 
 function addClickEvents() {
     document.querySelectorAll(".img-button").forEach(btn => {
