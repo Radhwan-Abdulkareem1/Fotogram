@@ -1,22 +1,27 @@
-button:focus-visible {
-    outline: 2px solid rgb(255, 255, 255);
-    outline-offset: 4px;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    max-width: 1440px;
+    max-width: 1920px;
+    flex: 1;
+    background-color: rgba(6, 23, 30, 1);
 }
 
 li {
     list-style: none;
+}
+
+button:focus-visible {
+    outline: 2px solid rgb(255, 255, 255);
+    outline-offset: 4px;
 }
 
 .icon-size {
@@ -93,6 +98,10 @@ li {
     padding: 88px 80px 64px 80px;
 }
 
+.main-padding {
+    padding: 88px 80px 64px 80px;
+}
+
 .main-imgs {
     display: flex;
     justify-content: center;
@@ -101,14 +110,19 @@ li {
     gap: 32px;
 }
 
+.img-button {
+    padding: 0;
+    border-radius: 16px;
+    border-width: 0;
+    border-style: none;
+    height: 200px;
+}
+
 .imgs {
     transition: all 0.4s ease;
     width: 200px;
     height: 200px;
     border-radius: 16px;
-    border-width: 0;
-    border-style: none;
-    padding: 0;
     cursor: pointer;
 }
 
@@ -191,6 +205,12 @@ li {
 
 /* kleine Laptop */
 
+@media (max-width: 1916px) {
+    .main-padding {
+        padding: 0;
+    }
+}
+
 @media (max-width: 992px) {
 
     .icon-size {
@@ -205,6 +225,8 @@ li {
     h5 {
         font-size: 12px;
     }
+
+
 
     .footer-center-links {
         font-size: 14px;
@@ -228,6 +250,11 @@ li {
 
     .headline {
         font-size: 30px;
+    }
+
+    .img-button {
+        width: 180px;
+        height: 180px;
     }
 
     .imgs {
@@ -273,6 +300,11 @@ li {
 
     .headline {
         font-size: 25px;
+    }
+
+    .img-button {
+        width: 170px;
+        height: 170px;
     }
 
     .imgs {
@@ -346,6 +378,11 @@ li {
         font-size: 20px;
     }
 
+    .img-button {
+        width: 150px;
+        height: 150px;
+    }
+
     .imgs {
         width: 150px;
         height: 150px;
@@ -390,6 +427,11 @@ li {
 
     .headline {
         font-size: 20px;
+    }
+
+    .img-button {
+        width: 100px;
+        height: 100px;
     }
 
     .imgs {
