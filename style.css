@@ -10,7 +10,7 @@ body {
 }
 
 main {
-    max-width: 1920px;
+    width: 100%;
     flex: 1;
     background-color: rgba(6, 23, 30, 1);
 }
@@ -41,7 +41,7 @@ button:focus-visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1920px;
+    width: 100%;
 }
 
 .logo {
@@ -139,7 +139,7 @@ button:focus-visible {
     background-color: rgba(9, 33, 42, 1);
     height: auto;
     padding: 0 80px;
-    max-width: 1920px;
+    width: 100%;
 }
 
 .footer-section {
@@ -196,10 +196,6 @@ button:focus-visible {
     align-items: center;
     flex-direction: row;
     gap: 24px;
-}
-
-.only-for-mobile {
-    display: none;
 }
 
 

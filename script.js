@@ -14,7 +14,7 @@ const myImgs = [
 
 let imgOutput = document.getElementById("imgs"); // hiermit haben wir zugriff auf unser div mit dem id imgs
 
-function Forschleife() {
+function renderImages() {
 
     for (let i = 0; i < myImgs.length; i++) {
 
