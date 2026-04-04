@@ -1,35 +1,41 @@
 const myImgs = [
 
-    { adress: "ahmadardity-quran-4951037_1280.jpg", name: "Quran", description: "Islamische Bücher" },
-    { adress: "ben_kerckx-mosque-6835469_1280.jpg", name: "Moschee", description: "Ein Moschee" },
-    { adress: "freebiespic-quran-4178711_1280.jpg", name: "Quran", description: "Ein Quran mit spanischer Übersetzung" },
-    { adress: "glady-mecca-66966_1280.jpg", name: "Mekkah vom Berg aus", description: "Mekkah" },
-    { adress: "hnsarowar385-mosque-8328077_1280.jpg", name: "Aqsa Moschee", description: "Aqsa Moschee im Quds" },
-    { adress: "konevi-cami-4190404_1280.jpg", name: "Madina", description: "Medina" },
-    { adress: "konevi-kaaba-4372252_1280.jpg", name: "Mahram Moschee", description: "Mahram Moschee in Mekkah" },
-    { adress: "mdjihadhossen-islam-8519137_1280.jpg", name: "Quran", description: "Quran" },
-    { adress: "rwayne307-al-aqsa-mosque-196846_1280.jpg", name: "Aqsa Moschee", description: "Aqsa Moschee im Quds" },
-    { adress: "shamsherniazi-birds-5407779_1280.jpg", name: "Moschee", description: "Ein Moschee in einem islamischem Stadt" }
-]; // das ist unser Array mit den unterschiedlichen Objekten! 
+    { address: "ahmadardity-quran-4951037_1280.jpg", name: "Quran", description: "Islamische Bücher" },
+    { address: "ben_kerckx-mosque-6835469_1280.jpg", name: "Moschee", description: "Ein Moschee" },
+    { address: "freebiespic-quran-4178711_1280.jpg", name: "Quran", description: "Ein Quran mit spanischer Übersetzung" },
+    { address: "glady-mecca-66966_1280.jpg", name: "Mekkah vom Berg aus", description: "Mekkah" },
+    { address: "hnsarowar385-mosque-8328077_1280.jpg", name: "Aqsa Moschee", description: "Aqsa Moschee im Quds" },
+    { address: "konevi-cami-4190404_1280.jpg", name: "Madina", description: "Medina" },
+    { address: "konevi-kaaba-4372252_1280.jpg", name: "Mahram Moschee", description: "Mahram Moschee in Mekkah" },
+    { address: "mdjihadhossen-islam-8519137_1280.jpg", name: "Quran", description: "Quran" },
+    { address: "rwayne307-al-aqsa-mosque-196846_1280.jpg", name: "Aqsa Moschee", description: "Aqsa Moschee im Quds" },
+    { address: "shamsherniazi-birds-5407779_1280.jpg", name: "Moschee", description: "Ein Moschee in einem islamischem Stadt" }
+];
 
-let imgOutput = document.getElementById("imgs"); // hiermit haben wir zugriff auf unser div mit dem id imgs
-let dialogRef = document.getElementById("dialog"); //Dialog rufen.
-let dialogImage = document.getElementById("dialogImage"); //img im dialog rufen.
-let dialogTitle = document.getElementById("pictureheadline"); // Überschrift im Dialog rufen
-let imageDescription = document.getElementById("imageCaption"); // Beschreibung des Bildes im Dialog.
-let currentIndex = 0; // das ist der Startposition.
-let spanRef = document.getElementById("imagePosition");
+const imgOutput = document.getElementById("imgs"); // get the div element with id "imgs"
+const dialogRef = document.getElementById("dialog"); // dialog used for displaying images
+const dialogImage = document.getElementById("dialogImage"); // image displayed in the dialog preview
+const dialogTitle = document.getElementById("pictureheadline"); // displays the image title in the dialog
+const imageDescription = document.getElementById("imageCaption");
+let currentIndex = 0; // tracks the currently displayed image index
+const spanRef = document.getElementById("imagePosition");
+
+// Renders all images from the myImgs array into the imgOutput container.
+// Each image is wrapped in a button element with a data-index attribute
+// to identify which image was clicked later.
 
 function renderImages() {
 
     for (let i = 0; i < myImgs.length; i++) {
 
-        let picture = myImgs[i]; //damit haben wir Zugriff auf objekts in unserem array.
+        let picture = myImgs[i]; // current image object
 
-        imgOutput.innerHTML += `<button data-index="${i}" class="img-button"><img src="./img/imgs/${picture.adress}" class="imgs" alt="${picture.name}"></button>`;
-        //mit der Forschleife tun wir: 1. div in einem button umgewandelt.
-        // 2. im button haben wir Bild mit der jeweiligen Adressen...
+        imgOutput.innerHTML += `
+            <button data-index="${i}" class="img-button">
+                <img src="./img/imgs/${picture.address}" class="imgs" alt="${picture.name}">
+            </button>`;
     }
+
     addClickEvents();
 }
 
@@ -42,58 +48,88 @@ function addClickEvents() {
     })
 }
 
+// Opens the dialog and displays the selected image based on the given index.
+// Updates image source, title, description, and shows the current position.
+
 function openDialog(index) {
 
-    currentIndex = index; // currentindex =  das Bild was geklickt wurde.
-    let selectedImage = myImgs[currentIndex]; // selectedImage =  das Bild was geklickt wurde.
-    dialogImage.src = `./img/imgs/${selectedImage.adress}`; //Das Bild im Dialog anzeigen
-    dialogTitle.textContent = selectedImage.name; // H1 im Dialog umschreiben
+    currentIndex = index;
+
+    const selectedImage = myImgs[currentIndex];
+
+    dialogImage.src = `./img/imgs/${selectedImage.address}`;
+    dialogTitle.textContent = selectedImage.name;
     imageDescription.textContent = selectedImage.description;
-    dialogRef.showModal(); // Dialog öffnen
+
+    dialogRef.showModal();
+
     showPositionOfImages();
 }
+
+
+// Closes the image dialog.
 
 function closeDialog() {
-    dialogRef.close() // Eine Funktion, um Dialog zu schließen
+    dialogRef.close();
 }
 
-document.getElementById("closeButton").addEventListener("click", closeDialog); //Damit befehlen wir den Dialog zu schließn wenn man auf closeButton klickt.
+
+// Closes the dialog when the close button is clicked.
+document.getElementById("closeButton").addEventListener("click", closeDialog);
+
+
+// Shows the next image in the list.
+// Loops back to the first image when reaching the end.
 
 function nextImage() {
-    currentIndex++; // nächste Position von currentIndex aufrufen
+    currentIndex++;
+
     if (currentIndex >= myImgs.length) {
-        currentIndex = 0; //Startet vom Beginn wieder!
+        currentIndex = 0;
     }
+
     updateDialogImage();
 }
+
+
+// Shows the previous image in the list.
+// Loops to the last image when reaching the beginning.
 
 function previousImage() {
-    currentIndex--; // letzte Position von currentIndex aufrufen
+    currentIndex--;
+
     if (currentIndex < 0) {
-        currentIndex = myImgs.length - 1; // Zum letzten Bild in Array springen.
+        currentIndex = myImgs.length - 1;
     }
 
     updateDialogImage();
 }
 
-// UpdateDialogImage ist dafür da, wenn nextImagegedrückt wird, dass Dialog neugeladen wird.
-function updateDialogImage() {
-    let selectedImage = myImgs[currentIndex]; //selectedImage =  das Bild was geklickt wurde.
 
-    dialogImage.src = `./img/imgs/${selectedImage.adress}`; // Bild wird neu ausgewählt.
-    dialogTitle.textContent = selectedImage.name; // Bildüberschrift wird neu ausgewählt.
-    imageDescription.textContent = selectedImage.description; // Bilderbeschreibung wird neu ausgewählt.
+// Updates the dialog content based on the current image index.
+// Refreshes image, title, description, and position.
+
+function updateDialogImage() {
+    let selectedImage = myImgs[currentIndex];
+
+    dialogImage.src = `./img/imgs/${selectedImage.address}`;
+    dialogTitle.textContent = selectedImage.name;
+    imageDescription.textContent = selectedImage.description;
+
     showPositionOfImages();
 }
 
-// addEventListener nutzen wir, um bei click auf backdrop Dialog zu schließen.
-dialogRef.addEventListener("click", (event) => {
-    if (event.target == dialogRef) {
-        dialogRef.close()
-    }
-}); // wenn der click, was targetiert wird gleich wie dialogRef ist, dann soll Dialog geschloßen werden.
 
+// Closes the dialog when clicking outside the content (backdrop).
+dialogRef.addEventListener("click", (event) => {
+    if (event.target === dialogRef) {
+        dialogRef.close();
+    }
+});
+
+
+// Displays the current image position (e.g. "1 / 10").
 function showPositionOfImages() {
-    let total = myImgs.length;
+    const total = myImgs.length;
     spanRef.textContent = `${currentIndex + 1} / ${total}`;
 }

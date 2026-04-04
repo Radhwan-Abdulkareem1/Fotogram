@@ -125,6 +125,7 @@ button:focus-visible {
     height: 200px;
     border-radius: 16px;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .imgs:hover {
