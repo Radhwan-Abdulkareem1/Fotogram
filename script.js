@@ -13,6 +13,12 @@ const myImgs = [
 ]; // das ist unser Array mit den unterschiedlichen Objekten! 
 
 let imgOutput = document.getElementById("imgs"); // hiermit haben wir zugriff auf unser div mit dem id imgs
+let dialogRef = document.getElementById("dialog"); //Dialog rufen.
+let dialogImage = document.getElementById("dialogImage"); //img im dialog rufen.
+let dialogTitle = document.getElementById("pictureheadline"); // Überschrift im Dialog rufen
+let imageDescription = document.getElementById("imageCaption"); // Beschreibung des Bildes im Dialog.
+let currentIndex = 0; // das ist der Startposition.
+let spanRef = document.getElementById("imagePosition");
 
 function renderImages() {
 
@@ -27,7 +33,6 @@ function renderImages() {
     addClickEvents();
 }
 
-
 function addClickEvents() {
     document.querySelectorAll(".img-button").forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -36,12 +41,6 @@ function addClickEvents() {
         })
     })
 }
-
-let dialogRef = document.getElementById("dialog"); //Dialog rufen.
-let dialogImage = document.getElementById("dialogImage"); //img im dialog rufen.
-let dialogTitle = document.getElementById("pictureheadline"); // Überschrift im Dialog rufen
-let imageDescription = document.getElementById("imageCaption"); // Beschreibung des Bildes im Dialog.
-let currentIndex = 0; // das ist der Startposition.
 
 function openDialog(index) {
 
@@ -77,7 +76,6 @@ function previousImage() {
     updateDialogImage();
 }
 
-
 // UpdateDialogImage ist dafür da, wenn nextImagegedrückt wird, dass Dialog neugeladen wird.
 function updateDialogImage() {
     let selectedImage = myImgs[currentIndex]; //selectedImage =  das Bild was geklickt wurde.
@@ -88,15 +86,12 @@ function updateDialogImage() {
     showPositionOfImages();
 }
 
-
 // addEventListener nutzen wir, um bei click auf backdrop Dialog zu schließen.
 dialogRef.addEventListener("click", (event) => {
     if (event.target == dialogRef) {
         dialogRef.close()
     }
-}); // wenn der click, waws targetiert wird gleich wie dialogRef ist, dann soll Dialog geschloßen werden.
-
-let spanRef = document.getElementById("imagePosition");
+}); // wenn der click, was targetiert wird gleich wie dialogRef ist, dann soll Dialog geschloßen werden.
 
 function showPositionOfImages() {
     let total = myImgs.length;

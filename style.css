@@ -15,6 +15,10 @@ main {
     background-color: rgba(6, 23, 30, 1);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 li {
     list-style: none;
 }
@@ -42,6 +46,7 @@ button:focus-visible {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -95,10 +100,6 @@ button:focus-visible {
     align-items: center;
     flex-direction: column;
     background-color: rgba(6, 23, 30, 1);
-    padding: 88px 80px 64px 80px;
-}
-
-.main-padding {
     padding: 88px 80px 64px 80px;
 }
 
